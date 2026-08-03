@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Assam's Workforce, Everywhere — BetterPlace</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230A1535'/%3E%3Crect x='7' y='10' width='18' height='5' rx='2' fill='%23FF6B1A'/%3E%3Crect x='7' y='18' width='12' height='5' rx='2' fill='%23FF6B1A'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:url" content="">
+<meta property="og:title" content="Assam's Workforce, Everywhere">
+<meta property="og:description" content="Protecting, upskilling & uplifting Assam's migrant workforce — a proposal by BetterPlace. Confidential.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Assam's Workforce, Everywhere">
+<meta name="twitter:description" content="Protecting, upskilling & uplifting Assam's migrant workforce — a proposal by BetterPlace. Confidential.">
+<meta name="theme-color" content="#0A1535">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Noto+Sans+Bengali:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --orange:#FF6B1A;--orange-deep:#E55A0F;--signal:#FF7A3D;--orange-glow:rgba(255,107,26,.22);
+    --gold:#F4B400;--gold-deep:#C88A00;--gold-glow:rgba(244,180,0,.18);
+    --navy:#0A1535;--navy-deep:#050B22;--navy-soft:#1B2A55;
+    --paper:#FAF7F2;--paper-warm:#F4EFE6;
+    --ink:#0A1535;--ink-soft:#3A4566;--ink-mute:#7A8299;
+    --green:#10B981;
+    --line-p:rgba(10,21,53,.12);--line-d:rgba(255,255,255,.12);
+    --tx-d:#EEF1F8;--tx-dmute:#9aa6c4;
+    --serif:'Fraunces',Georgia,serif;--sans:'Inter',system-ui,sans-serif;--mono:'JetBrains Mono',monospace;--kan:'Noto Sans Bengali',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%}
+  body{font-family:var(--sans);background:var(--navy-deep);color:var(--tx-d);overflow:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+
+  /* fixed design canvas — scaled uniformly to fit any screen. Overlap impossible. */
+  .viewport{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--navy-deep)}
+  .stage{position:relative;width:1280px;height:720px;flex:none;transform-origin:center center;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+
+  .slide{position:absolute;inset:0;display:none;flex-direction:column;overflow:hidden}
+  .slide.active{display:flex;animation:fade .5s ease both}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  .slide.dark{background:radial-gradient(130% 120% at 85% 0%,#152252 0%,var(--navy) 52%,var(--navy-deep) 100%);color:var(--tx-d)}
+  .slide.paper{background:var(--paper);color:var(--ink)}
+
+  .body{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;justify-content:center;padding:54px 76px 18px}
+  .footer{flex:0 0 auto;display:flex;justify-content:space-between;align-items:center;margin:0 76px;padding:13px 0;border-top:1px solid var(--line-d);font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--tx-dmute)}
+  .paper .footer{border-color:var(--line-p);color:var(--ink-mute)}
+
+  .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--orange);font-weight:500;display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+  .eyebrow::before{content:"";width:28px;height:1.5px;background:var(--orange)}
+  h1{font-family:var(--serif);font-weight:600;line-height:1.0;letter-spacing:-.02em}
+  h2{font-family:var(--serif);font-weight:600;line-height:1.07;letter-spacing:-.015em;font-size:38px;max-width:22ch}
+  .lede{font-size:16.5px;line-height:1.55;color:var(--tx-dmute);max-width:60ch;font-weight:300}
+  .paper .lede{color:var(--ink-soft)}
+  em{font-style:italic;color:var(--signal)}.paper em{color:var(--orange-deep)}
+  strong{font-weight:600;color:#fff}.paper strong{color:var(--ink)}
+  .kan{font-family:var(--kan);font-weight:600}
+  .head{flex:0 0 auto;margin-bottom:22px}
+  .fill{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;justify-content:center}
+
+  /* cover */
+  .cover .body{justify-content:flex-start;padding-top:96px}
+  .cover .glow{position:absolute;top:-18%;right:-10%;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle at 45% 45%,var(--orange-glow),transparent 60%);pointer-events:none}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--orange);margin-bottom:24px}
+  .cover h1{font-size:76px;max-width:15ch}
+  .cover .kanline{font-family:var(--kan);font-weight:600;font-size:25px;color:var(--orange);margin-top:16px;line-height:1.4}
+  .gamosa{width:190px;height:20px;background:var(--paper);border-top:4px solid var(--orange);border-bottom:4px solid var(--orange);border-radius:2px;margin-bottom:26px;display:flex;align-items:center;justify-content:space-around;padding:0 9px;box-shadow:0 8px 20px rgba(0,0,0,.32)}
+  .gamosa i{width:6px;height:6px;background:var(--orange);transform:rotate(45deg);display:block}
+  .cover .sub{font-family:var(--serif);font-style:italic;font-weight:400;font-size:22px;color:var(--signal);margin-top:8px}
+  .cover .tag{margin-top:20px;font-size:17px;color:var(--tx-dmute);max-width:56ch;font-weight:300;line-height:1.55}
+  .cover .prep{margin-top:auto;padding-top:24px}
+  .cover .prep .p1{font-size:13px;color:var(--tx-dmute);margin-bottom:9px}
+  .cover .brands{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;color:var(--orange)}
+
+  .grid{display:grid;gap:14px}
+  .g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}
+  .g4{grid-template-columns:repeat(4,1fr)}.g5{grid-template-columns:repeat(5,1fr)}
+  .stat{background:rgba(255,255,255,.04);border:1px solid var(--line-d);border-radius:14px;padding:18px}
+  .paper .stat{background:#fff;border-color:var(--line-p);box-shadow:0 1px 2px rgba(10,21,53,.04)}
+  .stat .num{font-family:var(--serif);font-weight:600;font-size:40px;line-height:1;color:var(--orange);letter-spacing:-.02em}
+  .stat.green .num{color:var(--green)}.stat.navy .num{color:var(--tx-d)}.paper .stat.navy .num{color:var(--ink)}
+  .stat .lab{margin-top:9px;font-size:12px;line-height:1.42;color:var(--tx-dmute)}
+  .paper .stat .lab{color:var(--ink-soft)}
+  .stat .src{margin-top:8px;font-family:var(--mono);font-size:8.5px;letter-spacing:.04em;color:var(--tx-dmute);opacity:.7;text-transform:uppercase}
+  .paper .stat .src{color:var(--ink-mute)}
+  .card{background:rgba(255,255,255,.04);border:1px solid var(--line-d);border-radius:14px;padding:16px 16px}
+  .paper .card{background:#fff;border-color:var(--line-p)}
+  .card h3{font-family:var(--sans);font-weight:600;font-size:14.5px;margin-bottom:6px;color:#fff;display:flex;align-items:center;gap:9px}
+  .paper .card h3{color:var(--ink)}
+  .card p{font-size:12px;line-height:1.48;color:var(--tx-dmute)}
+  .paper .card p{color:var(--ink-soft)}
+  .tick{font-family:var(--mono);font-size:10.5px;color:var(--orange);border:1px solid var(--orange);border-radius:6px;width:24px;height:24px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+
+  .split{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+  .split.top{align-items:start}
+  .split.narrow{grid-template-columns:1fr 1fr}
+
+  .chip{font-family:var(--mono);font-size:8px;letter-spacing:.08em;text-transform:uppercase;border-radius:5px;padding:2px 6px;display:inline-block;white-space:nowrap}
+  .c-act{color:var(--green);border:1px solid var(--green)}
+  .c-proj{color:var(--orange);border:1px solid var(--orange)}
+  .c-floor{color:var(--signal);border:1px solid var(--signal)}
+  .c-co{color:#9db4ff;border:1px solid #9db4ff}
+  .paper .c-act{color:#0f9d6f;border-color:#0f9d6f}.paper .c-proj{color:var(--orange-deep);border-color:var(--orange-deep)}
+
+  .quote{font-family:var(--serif);font-style:italic;font-weight:400;font-size:20px;line-height:1.42;color:var(--signal);border-left:3px solid var(--orange);padding-left:18px;max-width:56ch}
+  .paper .quote{color:var(--orange-deep)}
+
+  .stack{display:flex;flex-direction:column;gap:8px}
+  .stack-lab{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--tx-dmute);margin:1px 0}
+  .srow{display:flex;gap:7px}
+  .node{flex:1;text-align:center;background:rgba(255,255,255,.05);border:1px solid var(--line-d);border-radius:9px;padding:10px 5px;font-size:11.5px;font-weight:500;color:var(--tx-d);line-height:1.2}
+  .node span{font-family:var(--mono);font-size:8px;letter-spacing:.05em;text-transform:uppercase;color:var(--orange);display:block;margin-top:3px}
+  .golden{background:linear-gradient(100deg,var(--gold),var(--gold-deep));color:var(--navy-deep);border-radius:11px;padding:13px;text-align:center;box-shadow:0 8px 24px var(--gold-glow)}
+  .golden .gt{font-family:var(--serif);font-weight:600;font-size:18px;line-height:1.1}
+  .golden .gs{font-family:var(--mono);font-size:8px;letter-spacing:.05em;text-transform:uppercase;margin-top:5px;opacity:.75}
+  .kflag{display:flex;flex-direction:column;width:54px;border-radius:3px;overflow:hidden;margin-bottom:22px;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+  .kflag span{height:9px}.kflag span:first-child{background:var(--orange)}.kflag span:last-child{background:var(--gold)}
+  .feed{flex:1;text-align:center;background:rgba(255,107,26,.1);border:1px solid rgba(255,107,26,.3);border-radius:8px;padding:8px 3px;font-size:10px;color:var(--signal)}
+  .flow{text-align:center;color:var(--orange);font-size:10px;line-height:.8;letter-spacing:2px}
+  .own{display:flex;flex-direction:column;gap:10px}
+  .own .row{display:flex;gap:11px;align-items:flex-start}
+  .own .k{font-family:var(--mono);font-size:11px;color:var(--orange);flex:none;width:20px;padding-top:2px}
+  .own .v{font-size:13.5px;line-height:1.45;color:var(--tx-dmute)}.own .v b{color:#fff;font-weight:600}
+  .paper .own .v{color:var(--ink-soft)}.paper .own .v b{color:var(--ink)}
+
+  /* phone mockup + product visuals */
+  .phone{position:relative;width:160px;border-radius:24px;background:#0b1030;padding:6px;box-shadow:0 24px 56px -14px rgba(0,0,0,.6),0 0 0 1px rgba(255,255,255,.08);margin:0 auto}
+  .phone::before{content:"";position:absolute;top:11px;left:50%;transform:translateX(-50%);width:42px;height:5px;border-radius:5px;background:rgba(255,255,255,.22);z-index:2}
+  .phone img{width:100%;display:block;border-radius:19px}
+  .phonecap{text-align:center;margin-top:11px;font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--tx-dmute)}
+  .paper .phonecap{color:var(--ink-mute)}
+  /* verified worker-credential card */
+  .vcard{background:#fff;border-radius:13px;overflow:hidden;box-shadow:0 20px 46px -16px rgba(0,0,0,.5);width:100%;max-width:300px;margin:0 auto}
+  .vc-top{display:flex;align-items:center;gap:10px;padding:12px 14px;background:linear-gradient(120deg,var(--navy),#16264f);color:#fff}
+  .vc-av{width:34px;height:34px;border-radius:50%;background:var(--gold);color:var(--navy);font-family:var(--serif);font-weight:600;font-size:14px;display:grid;place-items:center;flex:none}
+  .vc-nm{font-family:var(--serif);font-weight:600;font-size:14px;line-height:1.1}
+  .vc-rl{font-size:10px;color:rgba(255,255,255,.7);margin-top:2px}
+  .vc-badge{margin-left:auto;display:inline-flex;align-items:center;gap:4px;background:var(--green);color:#04331f;font-family:var(--mono);font-size:8px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:5px 8px;border-radius:20px;white-space:nowrap}
+  .vc-badge svg{width:9px;height:9px;stroke:currentColor;fill:none;stroke-width:3.5}
+  .vc-body{padding:9px 14px}
+  .vc-row{display:flex;align-items:center;gap:8px;padding:5px 0;font-size:11px;color:var(--ink-soft)}
+  .vc-row svg{width:13px;height:13px;stroke:var(--green);fill:none;stroke-width:2.6;flex:none}
+  .vc-row b{color:var(--ink);font-weight:600}
+  .vc-foot{display:flex;justify-content:space-between;align-items:center;padding:9px 14px;background:var(--paper-warm);font-family:var(--mono);font-size:8px;letter-spacing:.03em;color:var(--ink-mute);text-transform:uppercase}
+  .vc-foot .t{color:var(--navy);font-weight:600}
+
+  /* vision stack — animation */
+  .flow{display:flex;justify-content:center;gap:24px}
+  .flow span{display:inline-block;color:var(--orange);animation:flowUp 1.8s ease-in-out infinite}
+  .flow span:nth-child(2){animation-delay:.22s}.flow span:nth-child(3){animation-delay:.44s}.flow span:nth-child(4){animation-delay:.66s}
+  @keyframes flowUp{0%{opacity:.15;transform:translateY(3px)}45%{opacity:1;color:var(--gold)}100%{opacity:.15;transform:translateY(-3px)}}
+  @keyframes vrise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  @keyframes cardGlow{0%,100%{box-shadow:0 20px 46px -16px rgba(0,0,0,.5),0 0 0 0 rgba(16,185,129,0)}50%{box-shadow:0 20px 46px -16px rgba(0,0,0,.5),0 0 28px 1px rgba(16,185,129,.5)}}
+  .slide.active .stack .node{animation:vrise .5s ease both;animation-delay:.15s}
+  .slide.active .stack .vcard{animation:vrise .55s ease both .3s, cardGlow 3.2s ease-in-out 1s infinite}
+  .slide.active .stack .feed{animation:vrise .5s ease both;animation-delay:.5s}
+  .slide.active .stack .stack-lab{animation:vrise .5s ease both;animation-delay:.08s}
+
+  .engine{display:flex;align-items:stretch;gap:8px}
+  .estep{flex:1;background:rgba(255,255,255,.04);border:1px solid var(--line-d);border-radius:12px;padding:15px 12px}
+  .paper .estep{background:#fff;border-color:var(--line-p)}
+  .estep .en{font-family:var(--mono);font-size:10px;color:var(--orange)}
+  .estep h4{font-family:var(--serif);font-weight:600;font-size:17px;margin:6px 0;color:#fff}
+  .paper .estep h4{color:var(--ink)}
+  .estep p{font-size:11px;line-height:1.4;color:var(--tx-dmute)}.paper .estep p{color:var(--ink-soft)}
+  .earrow{align-self:center;color:var(--orange);font-size:17px;flex:none}
+  .eloop{margin-top:13px;text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:.1em;color:var(--orange);text-transform:uppercase}
+
+  .pillar{background:rgba(255,255,255,.03);border:1px solid var(--line-d);border-radius:14px;padding:18px 15px;display:flex;flex-direction:column}
+  .pillar .pn{font-family:var(--mono);font-size:11px;color:var(--orange);margin-bottom:11px}
+  .pillar .pic{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:11px;font-size:17px;background:var(--orange-glow);color:var(--orange)}
+  .pillar h3{font-family:var(--serif);font-weight:600;font-size:15.5px;line-height:1.15;margin-bottom:8px;color:#fff}
+  .pillar p{font-size:11.5px;line-height:1.48;color:var(--tx-dmute)}
+
+  .phasebar{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+  .pmini{border:1px solid var(--line-p);border-radius:12px;padding:15px;background:#fff}
+  .pmini .pt{font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;color:var(--orange-deep);text-transform:uppercase;margin-bottom:6px}
+  .pmini h4{font-family:var(--serif);font-weight:600;font-size:15px;color:var(--ink);margin-bottom:5px}
+  .pmini p{font-size:11.5px;line-height:1.4;color:var(--ink-soft)}
+
+  .logos{display:flex;flex-wrap:wrap;gap:8px}
+  .logo{font-family:var(--mono);font-size:11px;letter-spacing:.02em;color:var(--tx-d);border:1px solid var(--line-d);border-radius:8px;padding:7px 12px}
+  .paper .logo{color:var(--ink);border-color:var(--line-p)}
+
+  .cta{background:linear-gradient(100deg,var(--orange),var(--orange-deep));color:#fff;border-radius:16px;padding:24px 28px;margin-top:18px}
+  .cta h3{font-family:var(--serif);font-weight:600;font-size:22px;margin-bottom:12px;color:#fff}
+  .cta .asks{display:flex;gap:24px;flex-wrap:wrap}
+  .cta .ask{display:flex;gap:10px;align-items:flex-start;max-width:28ch}
+  .cta .ask .n{font-family:var(--mono);font-weight:600;font-size:14px;color:#fff}
+  .cta .ask .t{font-size:13.5px;line-height:1.4;font-weight:500;color:#fff}
+
+  .sources{columns:2;column-gap:40px;counter-reset:s}
+  .sources li{list-style:none;font-size:11px;line-height:1.45;color:var(--ink-soft);margin-bottom:10px;break-inside:avoid;padding-left:19px;position:relative}
+  .sources li::before{content:counter(s);counter-increment:s;position:absolute;left:0;top:0;font-family:var(--mono);font-size:9.5px;color:var(--orange-deep)}
+  .sources b{color:var(--ink);font-weight:600}
+
+  /* nav — fixed to screen, outside the scaled stage */
+  .nav{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:60;display:flex;align-items:center;gap:14px;background:rgba(5,11,34,.82);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:100px;padding:7px 14px}
+  .nav button{background:none;border:none;color:#cdd6ec;cursor:pointer;font-size:16px;padding:3px 7px;border-radius:6px;line-height:1}
+  .nav button:hover{color:var(--orange)}
+  .dots{display:flex;gap:5px}
+  .dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.28);cursor:pointer;transition:.25s}
+  .dot.on{background:var(--orange);width:18px;border-radius:3px}
+  .counter{font-family:var(--mono);font-size:10.5px;color:#8593b5;min-width:42px;text-align:center}
+  .bar{position:fixed;top:0;left:0;height:2px;background:var(--orange);z-index:70;transition:width .4s ease}
+
+  @media print{
+    @page{size:1280px 720px;margin:0}
+    html,body{width:1280px;height:auto;overflow:visible;background:#fff}
+    .bar,.nav,.hint{display:none!important}
+    .viewport{position:static;display:block;overflow:visible;height:auto;align-items:initial;justify-content:initial}
+    .stage{transform:none!important;width:1280px;height:auto;box-shadow:none;position:static;flex:none}
+    .slide{position:relative!important;display:flex!important;opacity:1!important;visibility:visible!important;width:1280px;height:720px;overflow:hidden;page-break-after:always;break-after:page;transform:none!important}
+    .slide:last-child{page-break-after:auto;break-after:auto}
+    *{animation:none!important;transition:none!important}
+  }
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+<div class="viewport">
+<div class="stage" id="stage">
+
+  <!-- 1 COVER -->
+  <section class="slide dark cover active">
+    <div class="glow"></div>
+    <div class="body">
+      <div class="kicker">A Proposal for the Government of Assam</div>
+      <h1>Assam's Workforce,<br>Everywhere.</h1>
+      <div class="kanline kan">অসম আমাৰ ঘৰ। অসমীয়াৰ বাবে কাম আমাৰ লক্ষ্য।</div>
+      <div class="sub">Protect, upskill and uplift Assam's workers — wherever they are, and skill its youth for the jobs coming home.</div>
+      <p class="tag">Every month, young Assamese leave home to build the rest of India — often in unsafe, low-paid, invisible work. This is how Assam <strong>finds them, protects them, and lifts them up</strong> — and builds the pathway home.</p>
+      <div class="prep">
+        <div class="p1">Prepared for Hon'ble Chief Minister Dr. Himanta Biswa Sarma&nbsp;·&nbsp;Government of Assam</div>
+        <div class="brands">BetterPlace&nbsp;·&nbsp;verifyBetter&nbsp;·&nbsp;skillBetter&nbsp;·&nbsp;gigBetter&nbsp;·&nbsp;staffBetter&nbsp;·&nbsp;betterMoney</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2 THE SILENT EXODUS -->
+  <section class="slide dark">
+    <div class="body">
+      <div class="head">
+        <div class="eyebrow">The Silent Exodus</div>
+        <h2>Every month, Assam's young leave home to build the rest of India.</h2>
+      </div>
+      <div class="fill">
+        <div class="split">
+          <div>
+            <p class="lede" style="margin-bottom:14px">Assam's people want to work — its labour-force participation is among India's highest. But the jobs aren't at home. So hundreds of thousands migrate for construction, plywood, hotels, security and factory floors across the country.</p>
+            <div class="quote">Around 50 young men die every month after leaving their homes in search of work. This is a painful reality. <span style="display:block;font-style:normal;font-size:14px;color:var(--tx-dmute);margin-top:8px">— Dr. Himanta Biswa Sarma, Chief Minister of Assam, Feb 2026</span></div>
+          </div>
+          <div class="grid g2">
+            <div class="stat"><div class="num">66.9%</div><div class="lab">labour-force participation — among India's highest. People want work. <span class="chip c-act">Actual</span></div><div class="src">PLFS 2023–24</div></div>
+            <div class="stat navy"><div class="num">4.26 L</div><div class="lab">workers returned to Assam during COVID — and even that is an undercount <span class="chip c-floor">Floor</span></div><div class="src">Assam Tribune</div></div>
+            <div class="stat"><div class="num">~8 L</div><div class="lab">Assamese estimated in Kerala alone — in construction &amp; allied work <span class="chip c-proj">Estimate</span></div><div class="src">Assam Tribune</div></div>
+            <div class="stat green"><div class="num">21.16 L</div><div class="lab">registered educated job-seekers in Assam — qualified, but no local jobs <span class="chip c-act">Actual</span></div><div class="src">Assam Econ. Survey, 2024</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>BetterPlace · Frontline Workforce Platform · Present in 500+ cities</span><span class="pg"></span></div>
+  </section>
+
+  <!-- 3 WHERE THEY GO -->
+  <section class="slide paper">
+    <div class="body">
+      <div class="head">
+        <div class="eyebrow">Where Assam Works</div>
+        <h2>One state's youth, holding up others' economies.</h2>
+        <p class="lede" style="margin-top:11px">Assamese workers are the backbone of construction, plywood, seafood and hospitality across India — usually as the lowest-paid, least-protected hands on site.</p>
+      </div>
+      <div class="fill">
+        <div class="grid g3" style="margin-bottom:14px">
+          <div class="card"><h3>Kerala</h3><p><strong style="color:var(--orange-deep)">~8 lakh</strong> Assamese (est.). Perumbavoor's plywood hub — 1.5 lakh+ migrants — runs on Assamese labour.</p></div>
+          <div class="card"><h3>Tamil Nadu</h3><p>Seafood &amp; fish processing, SEZ and power-plant construction around Chennai &amp; Ennore.</p></div>
+          <div class="card"><h3>Karnataka &amp; Delhi–NCR</h3><p>Construction and hospitality. Assam is among Karnataka's top migrant-source states.</p></div>
+        </div>
+        <div class="grid g4">
+          <div class="stat"><div class="num" style="color:var(--orange-deep)">56.5%</div><div class="lab">of migrant construction workers are helpers — the bottom rung <span class="chip c-act">Actual</span></div><div class="src">Kerala survey</div></div>
+          <div class="stat navy"><div class="num">23.5%</div><div class="lab">work as masons — a step up, still informal <span class="chip c-act">Actual</span></div><div class="src">Kerala survey</div></div>
+          <div class="stat"><div class="num">~20%</div><div class="lab">hold a skilled role — most never get there <span class="chip c-act">Actual</span></div><div class="src">Kerala survey</div></div>
+          <div class="stat green"><div class="num">6</div><div class="lab">core sectors: construction, plywood, seafood, hotels, security, factories</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>BetterPlace · Frontline Workforce Platform · Present in 500+ cities</span><span class="pg"></span></div>
+  </section>
+
+  <!-- 4 THE INVISIBLE WORKFORCE -->
+  <section class="slide dark">
+    <div class="body">
+      <div class="head">
+        <div class="eyebrow">The Invisible Workforce</div>
+        <h2>Assam cannot protect a workforce it cannot see.</h2>
+      </div>
+      <div class="fill">
+        <div class="split">
+          <div>
+            <p class="lede" style="margin-bottom:13px">There is no database of Assam's outbound workers. They leave without informing anyone. The state learns of them <strong>only after abuse, accidents — or death.</strong></p>
+            <div class="own">
+              <div class="row"><span class="k">→</span><span class="v"><b>Ennore, Oct 2025</b> — 9 Assamese workers died in an accident at an SEZ power-station site.</span></div>
+              <div class="row"><span class="k">→</span><span class="v"><b>Tamil Nadu, 2026</b> — 2 Assamese women among 9 killed in an ammonia-gas leak at a seafood unit.</span></div>
+              <div class="row"><span class="k">→</span><span class="v"><b>Arunachal, 2026</b> — 7 Mising youths rescued from starvation and abuse at a construction site.</span></div>
+            </div>
+            <div class="quote" style="margin-top:16px">Today the state brings home the bodies. The care comes after death. <strong>It should come before.</strong></div>
+          </div>
+          <div class="grid g2">
+            <div class="stat"><div class="num">0</div><div class="lab">databases of Assam's outbound workers — the state can't see who is where <span class="chip c-act">Reported</span></div><div class="src">Assam Tribune</div></div>
+            <div class="stat navy"><div class="num">#1</div><div class="lab">Assam tops the Northeast for human trafficking — a known source state <span class="chip c-act">NCRB</span></div><div class="src">NCRB / EastMojo</div></div>
+            <div class="stat"><div class="num">354</div><div class="lab">deceased migrant workers' bodies returned under the Shraddhanjali scheme by 2026 <span class="chip c-act">Actual</span></div><div class="src">Govt. of Assam</div></div>
+            <div class="stat green"><div class="num">e-Shram</div><div class="lab">registers workers but never tags "migrant" — so no one can be found or protected</div><div class="src">e-Shram</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>BetterPlace · Frontline Workforce Platform · Present in 500+ cities</span><span class="pg"></span></div>
+  </section>
+
+  <!-- 5 THE TRAP -->
+  <section class="slide paper">
+    <div class="body">
+      <div class="head">
+        <div class="eyebrow">The Trap</div>
+        <h2>Unskilled, unverified, unprotected.</h2>
+        <p class="lede" style="margin-top:11px">Most Assamese migrants enter as helpers and stay there — at the bottom of the wage ladder, with no papers and no safety net.</p>
+      </div>
+      <div class="fill">
+        <div class="split">
+          <div>
+            <div class="own">
+              <div class="row"><span class="k">→</span><span class="v"><b>Stuck at the bottom.</b> 81% of India's construction workforce is unskilled — the exact bracket Assamese enter as helpers.</span></div>
+              <div class="row"><span class="k">→</span><span class="v"><b>Low wages, locked in.</b> Assam tea wages are ₹280/day — among India's lowest — pushing youth out into more of the same.</span></div>
+              <div class="row"><span class="k">→</span><span class="v"><b>Welfare doesn't travel.</b> Benefits are state-registered; nothing follows a worker across the border.</span></div>
+            </div>
+            <div class="quote" style="margin-top:18px">A certificate is the difference between a helper and a skilled worker — and between <strong style="color:var(--orange-deep)">invisible and insurable.</strong></div>
+          </div>
+          <div class="grid g2">
+            <div class="stat"><div class="num" style="color:var(--orange-deep)">81%</div><div class="lab">of India's construction workers are unskilled — the helper trap <span class="chip c-act">Actual</span></div><div class="src">Knight Frank, 2023</div></div>
+            <div class="stat"><div class="num">₹280</div><div class="lab">a day — Assam tea-garden wage, among the lowest in India <span class="chip c-act">Actual</span></div><div class="src">2025</div></div>
+            <div class="stat navy"><div class="num">₹525→605</div><div class="lab">the wage ladder: unskilled → skilled. Certification is the classifier <span class="chip c-act">Actual</span></div><div class="src">Statutory wages, 2025</div></div>
+            <div class="stat green"><div class="num">12 L+</div><div class="lab">work Assam's tea gardens — a young generation wants beyond plucking leaves <span class="chip c-act">Actual</span></div><div class="src">2025</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>BetterPlace · Frontline Workforce Platform · Present in 500+ cities</span><span class="pg"></span></div>
+  </section>
+
+  <!-- 5B THE JOBS ARE COMING HOME -->
+  <section class="slide dark">
+    <div class="body">
+      <div class="head">
+        <div class="eyebrow">The Turn</div>
+        <h2>And now — the jobs are finally coming to Assam.</h2>
+      </div>
+      <div class="fill">
+        <div class="split">
+          <div>
+            <p class="lede" style="margin-bottom:14px">Advantage Assam 2.0 loaded the <strong>largest investment pipeline in the state's history</strong> — and its jobs are overwhelmingly frontline: semiconductor assembly, plant construction, energy, logistics, hospitality.</p>
+            <p class="lede">For the first time, a young Assamese can build a career <strong>without boarding a train to Kochi</strong>. The state that skills its youth before the plants open keeps those jobs — and can call its people home.</p>
+            <div class="quote" style="margin-top:16px">Every MoU becomes a local job only if a verified, skilled Assamese worker is ready — in the right district, in the right month.</div>
+          </div>
+          <div class="grid g2">
+            <div class="stat"><div class="num">₹4.91<span style="font-size:.42em"> L Cr</span></div><div class="lab">committed at Advantage Assam 2.0 (Feb 2025) — the state's largest-ever pipeline <span class="chip c-act">Actual</span></div><div class="src">Govt. of Assam, 2025</div></div>
+            <div class="stat navy"><div class="num">₹27,000<span style="font-size:.34em"> Cr</span></div><div class="lab">Tata Electronics semiconductor plant at Jagiroad — anchor of the wave <span class="chip c-act">Actual</span></div><div class="src">Tata Electronics, 2025</div></div>
+            <div class="stat"><div class="num">~27 K</div><div class="lab">direct + indirect jobs projected from the Jagiroad plant alone <span class="chip c-proj">Projection</span></div><div class="src">Media-reported</div></div>
+            <div class="stat green"><div class="num">6</div><div class="lab">frontline engines: chips, energy, logistics, tourism, agro &amp; q-commerce <span class="chip c-act">Actual</span></div><div class="src">Advantage Assam 2.0</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>BetterPlace · Frontline Workforce Platform · Present in 500+ cities</span><span class="pg"></span></div>
+  </section>
+
+  <!-- 6 THE REFRAME -->
+  <section class="slide dark">
+    <div class="body">
+      <div class="head">
+        <div class="eyebrow">A Different Answer</div>
+        <h2>Build the jobs at home. But protect our people already out there.</h2>
+      </div>
+      <div class="fill">
+        <div class="split">
+          <div>
+            <div class="quote" style="margin-bottom:18px">Our aim is to ensure that the children of Assam do not have to leave their families and go outside the State for work. <span style="display:block;font-style:normal;font-size:14px;color:var(--tx-dmute);margin-top:8px">— Dr. Himanta Biswa Sarma, Chief Minister of Assam</span></div>
+            <p class="lede">Atmanirbhar Asom is the right long game. But hundreds of thousands are <strong>already outside today</strong> — and every month, families lose a son. We don't wait for that day. We reach Assam's workers wherever they are.</p>
+          </div>
+          <div class="grid" style="grid-template-columns:1fr;gap:12px">
+            <div class="card"><h3><span class="tick">1</span>Protect now</h3><p>Verify every worker, carry welfare &amp; insurance across state lines, and give them an SOS line that works anywhere in India.</p></div>
+            <div class="card"><h3><span class="tick">2</span>Upgrade now</h3><p>Upskill helpers into certified, better-paid, insurable jobs — in their own language, on their own phone.</p></div>
+            <div class="card"><h3><span class="tick">3</span>Bring home later</h3><p>Feed skilled, experienced Assamese back into Jagiroad, the refineries and the logistics parks the ₹4.91L Cr pipeline is building.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>BetterPlace · Frontline Workforce Platform · Present in 500+ cities</span><span class="pg"></span></div>
+  </section>
+
+  <!-- 7 VISION + STACK (animated) -->
+  <section class="slide dark">
+    <div class="body">
+      <div class="head">
+        <div class="eyebrow">The Vision</div>
+        <h2>One Assamese worker. One verified profile. Everywhere they go.</h2>
+        <p class="lede" style="margin-top:11px">An <strong>Assam Worker Stack</strong> — a verified, portable, lifelong profile that follows every Assamese worker across India, carrying their identity, welfare and skills. The state's living record of its people, wherever they work.</p>
+      </div>
+      <div class="fill">
+        <div class="split">
+          <div>
+            <div class="own">
+              <div class="row"><span class="k">01</span><span class="v"><b>Assam owns the data.</b> We run the engine. The registry and control stay with the state.</span></div>
+              <div class="row"><span class="k">02</span><span class="v"><b>It travels with the worker.</b> Identity, welfare and skills move across every border — one profile, for life.</span></div>
+              <div class="row"><span class="k">03</span><span class="v"><b>Proactive, not after-death.</b> The state sees and protects a worker before harm, not once a body comes home.</span></div>
+            </div>
+            <div class="quote" style="margin-top:16px">Formalise the migrant workforce the way UPI formalised payments — trusted, verified, built for scale.</div>
+          </div>
+          <div class="stack">
+            <div class="stack-lab">Serves</div>
+            <div class="srow">
+              <div class="node">CM Dashboard<span>real-time</span></div>
+              <div class="node">The Worker<span>one profile</span></div>
+              <div class="node">Employers<span>verified</span></div>
+              <div class="node">Welfare Boards<span>portable</span></div>
+            </div>
+            <div class="flow"><span>▲</span><span>▲</span><span>▲</span><span>▲</span></div>
+            <div class="vcard">
+              <div class="vc-top"><div class="vc-av">✓</div><div><div class="vc-nm">Assam Worker · Verified</div><div class="vc-rl">Portable · lifelong</div></div><div class="vc-badge"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Verified</div></div>
+              <div class="vc-body">
+                <div class="vc-row"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Identity &amp; skills — <b>certified</b></div>
+                <div class="vc-row"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>Welfare &amp; insurance — <b>linked, portable</b></div>
+              </div>
+              <div class="vc-foot"><span>Portable record</span><span class="t">Assam Worker Stack</span></div>
+            </div>
+            <div class="flow"><span>▲</span><span>▲</span><span>▲</span><span>▲</span></div>
+            <div class="stack-lab">Fed automatically by</div>
+            <div class="srow">
+              <div class="feed">e-Shram</div><div class="feed">EPFO</div><div class="feed">ESIC</div><div class="feed">ASDM</div><div class="feed">Labour Dept</div><div class="feed">Orunodoi</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>BetterPlace · Frontline Workforce Platform · Present in 500+ cities</span><span class="pg"></span></div>
+  </section>
+
+  <!-- 8 THE ENGINE -->
+  <section class="slide paper">
+    <div class="body">
+      <div class="head">
+        <div class="eyebrow">How It Works</div>
+        <h2>Reach. Verify. Protect. Upskill. Uplift.</h2>
+        <p class="lede" style="margin-top:11px">We don't hand the state a portal. We run the full loop — and hand back workers who are seen, protected and moving up.</p>
+      </div>
+      <div class="fill">
+        <div class="engine">
+          <div class="estep"><div class="en">01</div><h4>Reach</h4><p>Assamese-first outreach in the tea belt, char areas &amp; at source. Register before they leave.</p></div>
+          <div class="earrow">→</div>
+          <div class="estep"><div class="en">02</div><h4>Verify</h4><p>A verified identity + skills profile — insurable, and resistant to trafficking &amp; fake jobs.</p></div>
+          <div class="earrow">→</div>
+          <div class="estep"><div class="en">03</div><h4>Protect</h4><p>Portable welfare, insurance &amp; an SOS line that works across every state line.</p></div>
+          <div class="earrow">→</div>
+          <div class="estep"><div class="en">04</div><h4>Upskill</h4><p>Mobile-first Assamese training turns a helper into a certified, higher-paid worker.</p></div>
+          <div class="earrow">→</div>
+          <div class="estep"><div class="en">05</div><h4>Uplift</h4><p>Placed into safer, formal jobs — with a pathway home as Assam's own jobs grow.</p></div>
+        </div>
+        <div class="eloop">↺ &nbsp; Every worker seen, protected and upgraded — and counted on the CM's dashboard &nbsp; ↺</div>
+      </div>
+    </div>
+    <div class="footer"><span>BetterPlace · Frontline Workforce Platform · Present in 500+ cities</span><span class="pg"></span></div>
+  </section>
+
+  <!-- 9 WELL-BEING & SOCIAL SECURITY -->
+  <section class="slide dark">
+    <div class="body">
+      <div class="head">
+        <div class="eyebrow">Well-being &amp; Protection</div>
+        <h2>Protection that travels with the worker.</h2>
+        <p class="lede" style="margin-top:11px">Turn the state's care from a repatriation scheme into a shield that follows every Assamese worker, alive and well, wherever they go.</p>
+      </div>
+      <div class="fill">
+        <div class="grid g2" style="gap:16px">
+          <div class="card"><h3><span class="tick">◆</span>Portable welfare &amp; insurance</h3><p>Social security that crosses state borders — accident &amp; life cover from day one, benefits that don't reset when a worker moves.</p></div>
+          <div class="card"><h3><span class="tick">◆</span>Financial inclusion</h3><p>Bank-linked wages, savings, easy remittance home and early-wage access — so families are protected, not indebted (betterMoney).</p></div>
+          <div class="card"><h3><span class="tick">◆</span>Safe migration &amp; anti-trafficking</h3><p>Verified employers, a registered trail and an SOS grievance line — so a missing worker can be found, and a fake job flagged.</p></div>
+          <div class="card"><h3><span class="tick">◆</span>From Shraddhanjali to prevention</h3><p>The state already brings the fallen home. We help keep them safe while they live — the same intent, made proactive.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>BetterPlace · Frontline Workforce Platform · Present in 500+ cities</span><span class="pg"></span></div>
+  </section>
+
+  <!-- 10 UPSKILLING (with phone) -->
+  <section class="slide paper">
+    <div class="body">
+      <div class="head">
+        <div class="eyebrow">Upskilling · skillBetter</div>
+        <h2>From helper to skilled — in their own language.</h2>
+      </div>
+      <div class="fill">
+        <div class="split narrow top">
+          <div>
+            <p class="lede" style="margin-bottom:14px">Mobile-first, Assamese-first training that turns an unskilled helper into a <strong>certified, higher-paid, insurable</strong> worker — and opens the door to formal jobs.</p>
+            <div class="own">
+              <div class="row"><span class="k">→</span><span class="v"><b>The ladder:</b> helper ₹525 → skilled ₹605+ a day. Certification is what moves them up.</span></div>
+              <div class="row"><span class="k">→</span><span class="v"><b>The tracks:</b> masonry, electrical, welding, plumbing, security (PSARA), hospitality, driving &amp; delivery.</span></div>
+              <div class="row"><span class="k">→</span><span class="v"><b>Global-ready:</b> language &amp; skills for the CM's Flight Scheme — Assamese youth placed abroad.</span></div>
+            </div>
+          </div>
+          <div>
+            <div class="phone" style="width:150px"><img src="assets/app-proctoring.webp" alt="skillBetter — AI proctoring, live in the app"/></div>
+            <div class="phonecap" style="font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-mute);text-align:center;margin-top:11px">Certify on a low-cost phone · live in the skillBetter app</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>BetterPlace · Frontline Workforce Platform · Present in 500+ cities</span><span class="pg"></span></div>
+  </section>
+
+  <!-- 10B THE READINESS GAP -->
+  <section class="slide paper">
+    <div class="body">
+      <div class="head">
+        <div class="eyebrow">The Readiness Gap</div>
+        <h2>The plants are coming. Skill for them the right way.</h2>
+      </div>
+      <div class="fill">
+        <div class="split">
+          <div>
+            <p class="lede" style="margin-bottom:13px">India's experience is consistent — state skilling built <strong>without live employer demand</strong> produces certificates, not jobs. Karnataka's own audit found just <strong>18% of trainees placed against a 70% target</strong>, courses chosen without vacancy evidence.</p>
+            <p class="lede" style="margin-bottom:13px">Assam can leapfrog that mistake: wire skilling to the <strong>named, dated demand</strong> of Jagiroad, the refineries and the logistics parks — before they switch on.</p>
+            <div class="quote" style="margin-top:6px">BetterPlace's model is the inversion: <strong style="color:var(--orange-deep)">demand first, placement verified, paid on outcomes.</strong></div>
+          </div>
+          <div class="grid" style="grid-template-columns:1fr;gap:12px">
+            <div class="card"><h3>Role-level demand mapping</h3><p>Cleanroom &amp; assembly operators, industrial electricians, welders, warehouse associates, hospitality staff — the exact roles the pipeline hires, mapped district by district.</p></div>
+            <div class="card"><h3>Women-first pipelines</h3><p>Electronics assembly is a proven women's-employment engine across Asia. Assam can design women-first tracks into Jagiroad from day one.</p></div>
+            <div class="card"><h3>Timing is everything</h3><p>Skilling has a lead time. Plants hiring in 12–24 months need sourcing &amp; training <strong>started now</strong>.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>BetterPlace · Frontline Workforce Platform · Present in 500+ cities</span><span class="pg"></span></div>
+  </section>
+
+  <!-- 11 WHY BETTERPLACE / REACH -->
+  <section class="slide dark">
+    <div class="body">
+      <div class="head">
+        <div class="eyebrow">Why BetterPlace</div>
+        <h2>We're already where Assam works.</h2>
+        <p class="lede" style="margin-top:11px">Kochi, Chennai, Bengaluru, Delhi — the exact cities Assamese migrate to. We don't have to find them from Guwahati. We're already there.</p>
+      </div>
+      <div class="fill">
+        <div class="grid g4" style="margin-bottom:18px">
+          <div class="stat"><div class="num">500+</div><div class="lab">cities live across India &amp; SE Asia — the destinations, not just the source</div></div>
+          <div class="stat green"><div class="num">30M+</div><div class="lab">frontline workers on the platform <span class="chip c-co">Company</span></div></div>
+          <div class="stat"><div class="num">2.5M+</div><div class="lab">workers skilled to date <span class="chip c-co">Company</span></div></div>
+          <div class="stat navy"><div class="num">Asom-first</div><div class="lab">AI in Assamese, on a low-cost phone</div></div>
+        </div>
+        <div class="grid g2" style="gap:16px">
+          <div class="card"><h3><span class="tick">◆</span>The reach to find them</h3><p>An on-ground network in the very cities Assamese work — so a worker in Perumbavoor or Ennore is one we can already reach, verify and protect.</p></div>
+          <div class="card"><h3><span class="tick">◆</span>The data to place them</h3><p>The largest verified frontline workforce dataset in Asia — matching skilled Assamese to safer, better-paid, formal employers.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>BetterPlace · Frontline Workforce Platform · Present in 500+ cities</span><span class="pg"></span></div>
+  </section>
+
+  <!-- 12 ALIGNED WITH THE CM AGENDA -->
+  <section class="slide dark">
+    <div class="body">
+      <div class="head">
+        <div class="eyebrow">Aligned with the CM's Agenda</div>
+        <h2>Your priorities, made real on the ground.</h2>
+        <p class="lede" style="margin-top:11px">You have set the direction. What's missing is the engine that reaches, protects and upgrades workers where they actually are.</p>
+      </div>
+      <div class="fill">
+        <div class="grid g4">
+          <div class="card"><h3>Advantage Assam 2.0 · Jagiroad</h3><p>The ₹4.91L Cr pipeline needs a ready Assamese workforce — we skill and place them into it, and feed experienced migrants home.</p></div>
+          <div class="card"><h3>Shraddhanjali, made proactive</h3><p>You bring the fallen home. We help protect them before harm — verified, insured, reachable.</p></div>
+          <div class="card"><h3>CM Flight Scheme · global jobs</h3><p>Verified, certified, language-ready Assamese candidates for international placement, including Japan.</p></div>
+          <div class="card"><h3>The placement gap you named</h3><p>The department admits it has no scheme to place Assam's 15.4 lakh registered unemployed. This is that scheme — built on ASDM &amp; the Skill University.</p></div>
+        </div>
+        <div class="quote" style="margin-top:18px">No Assamese should be invisible, unskilled or unprotected — not in Guwahati, and not in Kochi.</div>
+      </div>
+    </div>
+    <div class="footer"><span>BetterPlace · Frontline Workforce Platform · Present in 500+ cities</span><span class="pg"></span></div>
+  </section>
+
+  <!-- 13 PILOT + ROADMAP -->
+  <section class="slide paper">
+    <div class="body">
+      <div class="head">
+        <div class="eyebrow">The On-Ramp</div>
+        <h2>Start with one corridor. Prove it in 90 days.</h2>
+        <p class="lede" style="margin-top:11px">A migration-corridor pilot that proves protection, upskilling and the live dashboard before any statewide rollout.</p>
+      </div>
+      <div class="fill">
+        <div class="split narrow top">
+          <div>
+            <div class="eyebrow" style="margin-bottom:10px">The 90-day pilot</div>
+            <div class="grid" style="gap:9px">
+              <div class="card"><p><strong style="color:var(--ink)">One corridor + one source district</strong> — the Assam→Kerala construction &amp; plywood belt (Perumbavoor), plus a tea-belt district at home.</p></div>
+              <div class="card"><p><strong style="color:var(--ink)">Register, verify, welfare-enroll &amp; upskill</strong> a first cohort — with insurance and an SOS line live from day one.</p></div>
+              <div class="card"><p><strong style="color:var(--ink)">First cut of the CM dashboard</strong> — a live map of who is where, and who is protected.</p></div>
+            </div>
+          </div>
+          <div>
+            <div class="eyebrow" style="margin-bottom:10px">What we ask</div>
+            <div class="grid" style="gap:9px">
+              <div class="card"><h3>Policy sponsorship</h3><p>Endorsement under ASDM &amp; the Labour &amp; Welfare department.</p></div>
+              <div class="card"><h3>Data &amp; platform access</h3><p>Linkage to e-Shram, welfare boards &amp; the Shraddhanjali registry.</p></div>
+              <div class="card"><h3>A joint working group</h3><p>With Labour, Skill Development &amp; Special Branch, convened within <strong style="color:var(--ink)">30 days</strong>.</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="phasebar">
+          <div class="pmini"><div class="pt">Phase 1 · 0–6 mo</div><h4>Corridor Pilot</h4><p>One corridor + one district live · dashboard stood up.</p></div>
+          <div class="pmini"><div class="pt">Phase 2 · 6–18 mo</div><h4>Top Corridors</h4><p>Kerala, Tamil Nadu, Karnataka corridors · Assam Worker ID statewide.</p></div>
+          <div class="pmini"><div class="pt">Phase 3 · 18–36 mo</div><h4>Every Worker Seen</h4><p>Full stack · real-time CM dashboard · pathway-home placements.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>BetterPlace · Frontline Workforce Platform · Present in 500+ cities</span><span class="pg"></span></div>
+  </section>
+
+  <!-- 14 IMPACT -->
+  <section class="slide dark">
+    <div class="body">
+      <div class="head">
+        <div class="eyebrow">Expected Impact &nbsp;·&nbsp; <span class="chip c-proj">Targets</span></div>
+        <h2>A live map of every Assamese worker in India.</h2>
+      </div>
+      <div class="fill">
+        <div class="grid g4" style="margin-bottom:12px">
+          <div class="stat"><div class="num">Seen</div><div class="lab">every outbound worker registered &amp; verified — the data gap, closed</div></div>
+          <div class="stat green"><div class="num">Protected</div><div class="lab">portable welfare, insurance &amp; an SOS line that crosses borders</div></div>
+          <div class="stat"><div class="num">Upgraded</div><div class="lab">helpers certified into safer, higher-paid, formal jobs</div></div>
+          <div class="stat navy"><div class="num">1</div><div class="lab">real-time dashboard — who is where, who is safe, who is placed</div></div>
+        </div>
+        <p class="lede" style="font-size:11px;color:var(--tx-dmute);margin-bottom:12px">Targets, not promises — scaled from the corridor pilot. Every worker verified and counted on the CM's dashboard.</p>
+        <div class="quote">Assam becomes the first state that can see, protect and uplift its workers — wherever in India they are. Fewer bodies come home. More skilled workers do.</div>
+      </div>
+    </div>
+    <div class="footer"><span>BetterPlace · Frontline Workforce Platform · Present in 500+ cities</span><span class="pg"></span></div>
+  </section>
+
+  <!-- 15 THE ASK -->
+  <section class="slide dark">
+    <div class="body">
+      <div class="head">
+        <div class="eyebrow">The Ask</div>
+        <h2>Assam already brings its workers home. Let's protect them while they're away.</h2>
+      </div>
+      <div class="fill">
+        <div class="kan" style="font-size:24px;color:var(--orange);margin-bottom:14px;line-height:1.4">অসম আমাৰ ঘৰ। অসমীয়াৰ বাবে কাম আমাৰ লক্ষ্য।</div>
+        <p class="lede">We're asking for your endorsement, and for <strong>BetterPlace as Assam's delivery partner</strong> — starting with a 90-day corridor pilot, so no Assamese worker is invisible, unskilled or unprotected.</p>
+        <div class="cta">
+          <h3>What we'd like to walk out with</h3>
+          <div class="asks">
+            <div class="ask"><span class="n">01</span><span class="t">Endorsement of the vision &amp; BetterPlace as execution partner</span></div>
+            <div class="ask"><span class="n">02</span><span class="t">A committed 90-day corridor pilot</span></div>
+            <div class="ask"><span class="n">03</span><span class="t">A joint working group convened within 30 days</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer"><span>BetterPlace · verifyBetter · skillBetter · gigBetter · staffBetter · betterMoney</span><span class="pg"></span></div>
+  </section>
+
+  <!-- 16 SOURCES -->
+  <section class="slide paper">
+    <div class="body">
+      <div class="head">
+        <div class="eyebrow">Sources &amp; Notes</div>
+        <h2>The evidence behind this proposal.</h2>
+      </div>
+      <div class="fill">
+        <ul class="sources">
+          <li><b>CM Dr. Himanta Biswa Sarma</b> — "≈50 young men die every month after leaving home for work"; "children of Assam should not have to leave for work." Assam Tribune, Feb 2026. Re-elected for a 2nd term (2026 Assam election).</li>
+          <li><b>Out-migration scale</b> — ~72 lakh unorganised workers on e-Shram (a floor; not migrant-tagged); 4.26 lakh returned during COVID; ~8 lakh Assamese estimated in Kerala. Assam Tribune; Sentinel Assam.</li>
+          <li><b>Kerala construction split</b> — 56.5% helpers, 23.5% masons, ~20% skilled (survey). Perumbavoor plywood hub (1.5 lakh+ migrants) runs on Assamese labour. IJSSHR; Deccan Herald.</li>
+          <li><b>Assam labour market</b> — LFPR 66.9% (PLFS 2023–24); 21.16 lakh registered educated job-seekers (2024); 15.4 lakh registered unemployed (Jun 2026); dept. admits no in-state placement scheme. Assam Econ. Survey; Sentinel Assam.</li>
+          <li><b>The trap</b> — 81% of India's construction workforce unskilled (Knight Frank, 2023); Assam tea wage ₹280/day; wage ladder ₹525→₹605 with certification.</li>
+          <li><b>Human cost</b> — Ennore (9 deaths, Oct 2025); ammonia-leak deaths (2026); Mising youths rescued from abuse (2026). Assam = NE's top trafficking source state (NCRB). Assam Tribune; EastMojo.</li>
+          <li><b>Government response</b> — Shraddhanjali scheme (Oct 2025): 354 bodies repatriated by 2026 — reactive, after death. Govt. of Assam.</li>
+          <li><b>The investment wave</b> — Advantage Assam 2.0 (Feb 2025): ₹4.91 lakh Cr of commitments; Tata Electronics ₹27,000 Cr semiconductor OSAT at Jagiroad (~27,000 direct+indirect jobs projected, media-reported). Govt. of Assam; Tata Electronics.</li>
+          <li><b>The skilling lesson</b> — Karnataka CAG Report No. 6 of 2025 (CMKKY): 18% placement vs 70% target — the national case for demand-first skilling.</li>
+          <li><b>Schemes to build on</b> — ASDM, Assam Skill University (Mangaldai), Orunodoi, CM's Atmanirbhar Asom self-employment scheme, CM Flight Scheme (global placement).</li>
+          <li><b>BetterPlace company figures</b> — present in 500+ cities; 30M+ workers, 2.5M+ skilled. Company-reported.</li>
+        </ul>
+        <p class="lede" style="margin-top:4px;font-size:11px;color:var(--ink-mute)">Migration "scale" figures are estimates or administrative floors — Assam keeps no census of its outbound workers. Incident tolls are from single-outlet reports; verify each before publication. Company figures are company-reported. Year-3 outcomes are targets.</p>
+      </div>
+    </div>
+    <div class="footer"><span>BetterPlace · Frontline Workforce Platform · Present in 500+ cities</span><span class="pg"></span></div>
+  </section>
+
+</div><!-- /stage -->
+</div><!-- /viewport -->
+
+<div class="nav">
+  <button id="prev" aria-label="Previous">‹</button>
+  <div class="dots" id="dots"></div>
+  <span class="counter" id="counter"></span>
+  <button id="next" aria-label="Next">›</button>
+</div>
+
+<script>
+  const stage=document.getElementById('stage');
+  function fit(){
+    const s=Math.min(window.innerWidth/1280, window.innerHeight/720);
+    stage.style.transform='scale('+s+')';
+  }
+  window.addEventListener('resize',fit); fit();
+
+  const slides=[...document.querySelectorAll('.slide')];
+  const total=slides.length;
+  let i=0;
+  const dots=document.getElementById('dots');
+  const counter=document.getElementById('counter');
+  const bar=document.getElementById('bar');
+  const pad=n=>String(n).padStart(2,'0');
+  slides.forEach((s,n)=>{const f=s.querySelector('.pg');if(f)f.textContent=pad(n+1);});
+  slides.forEach((_,n)=>{const d=document.createElement('div');d.className='dot'+(n===0?' on':'');d.onclick=()=>go(n);dots.appendChild(d);});
+  const dotEls=[...dots.children];
+  function go(n){
+    if(n<0||n>=total)return;
+    slides[i].classList.remove('active');dotEls[i].classList.remove('on');
+    i=n;
+    slides[i].classList.add('active');dotEls[i].classList.add('on');
+    counter.textContent=pad(i+1)+' / '+pad(total);
+    bar.style.width=(i/(total-1)*100)+'%';
+  }
+  document.getElementById('next').onclick=()=>go(i+1);
+  document.getElementById('prev').onclick=()=>go(i-1);
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key==='PageDown'||e.key===' ')go(i+1);
+    if(e.key==='ArrowLeft'||e.key==='PageUp')go(i-1);
+    if(e.key==='Home')go(0);if(e.key==='End')go(total-1);
+  });
+  let sx=0,sy=0;
+  document.addEventListener('touchstart',e=>{sx=e.changedTouches[0].screenX;sy=e.changedTouches[0].screenY;},{passive:true});
+  document.addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-sx,dy=e.changedTouches[0].screenY-sy;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy))dx<0?go(i+1):go(i-1);},{passive:true});
+  counter.textContent='01 / '+pad(total);
+</script>
+</body>
+</html>

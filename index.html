@@ -276,6 +276,18 @@
   .ctab td:nth-child(3){font-size:10px;color:var(--ink-mute)}
   .ctab tr.tot td{border-top:2px solid var(--ink);border-bottom:none;font-weight:700;color:var(--ink);padding-top:9px}
   .ctab tr.tot td:nth-child(2){color:var(--orange-deep);font-size:13.5px}
+  /* estimate table (2-lakh proposal) */
+  .qtab{width:100%;border-collapse:collapse}
+  .qtab th{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);padding:7px 10px;border-bottom:1px solid var(--line-p);font-weight:500;text-align:left}
+  .qtab th.r,.qtab td.r{text-align:right}
+  .qtab td{padding:12px 10px;border-bottom:1px solid var(--line-p);color:var(--ink);vertical-align:middle}
+  .qtab td.comp{font-weight:600;font-size:14.5px;line-height:1.2}
+  .qtab td.comp .sub{display:block;font-size:10.5px;color:var(--ink-mute);font-weight:400;margin-top:3px}
+  .qtab td.r{font-family:var(--mono);font-weight:600;font-size:13px;white-space:nowrap}
+  .qtab td.amt{color:var(--orange-deep);font-weight:700;font-size:15.5px}
+  .qtab tr.tot td{border-top:2px solid var(--ink);border-bottom:none;padding-top:14px}
+  .qtab tr.tot .comp{font-family:var(--serif);font-size:18px}
+  .qtab tr.tot .amt{font-size:24px}
 
   @media print{
     @page{size:1280px 720px;margin:0}
@@ -839,32 +851,28 @@
     <div class="body">
       <div class="head">
         <div class="eyebrow">Commercials</div>
-        <h2>Priced on outcomes. Built to scale.</h2>
-        <p class="lede" style="margin-top:11px">A milestone-linked model — the state pays for candidates <strong>skilled, certified and placed</strong>, not for enrolment. Indicative unit economics, to be finalised together.</p>
+        <h2>Priced on outcomes. Built for 2 lakh.</h2>
+        <p class="lede" style="margin-top:11px">A simple, milestone-linked model — a fixed fee to <strong>skill &amp; certify</strong> each worker, and a <strong>placement fee paid only when a verified job is confirmed</strong>. Ready for the corridor projects and jobs across India &amp; abroad.</p>
       </div>
       <div class="fill">
-        <div class="split" style="grid-template-columns:1.25fr .75fr;gap:34px;align-items:start">
-          <table class="ctab">
-            <thead><tr><th>Cost head</th><th>Per candidate</th><th>Paid on</th></tr></thead>
-            <tbody>
-              <tr><td>Training delivery</td><td>₹2,000</td><td>module completion</td></tr>
-              <tr><td>Assessment &amp; certification</td><td>₹500</td><td>NSQF certified</td></tr>
-              <tr><td>Job-placement enablement</td><td>₹12,000</td><td>verified placement</td></tr>
-              <tr><td>Registry &amp; infra</td><td>₹200</td><td>profile created</td></tr>
-              <tr><td>Mobilisation &amp; outreach</td><td>₹400</td><td>enrolment</td></tr>
-              <tr><td>Monitoring &amp; analytics</td><td>₹300</td><td>active</td></tr>
-              <tr><td>Content localisation (Assamese)</td><td>₹300</td><td>active</td></tr>
-              <tr><td>PMU &amp; governance</td><td>₹100</td><td>active</td></tr>
-              <tr class="tot"><td>Blended cost / certified candidate</td><td>≈ ₹5,000</td><td>outcome-linked</td></tr>
-            </tbody>
-          </table>
+        <div class="split" style="grid-template-columns:1.34fr .66fr;gap:34px;align-items:start">
+          <div>
+            <table class="qtab">
+              <thead><tr><th>Component</th><th class="r">Volume</th><th class="r">Rate</th><th class="r">Total</th></tr></thead>
+              <tbody>
+                <tr><td class="comp">Skill &amp; certify<span class="sub">training, NSQF certificate + verified digital identity</span></td><td class="r">2,00,000</td><td class="r">₹5,000</td><td class="r amt">₹100 Cr</td></tr>
+                <tr><td class="comp">Place in a job<span class="sub">20% placement target · paid only on verified placement</span></td><td class="r">40,000</td><td class="r">₹7,000</td><td class="r amt">₹28 Cr</td></tr>
+                <tr class="tot"><td class="comp">Total programme</td><td class="r"></td><td class="r"></td><td class="r amt">₹128 Cr</td></tr>
+              </tbody>
+            </table>
+            <p class="lede" style="font-size:11px;color:var(--ink-mute);margin-top:10px">≈ ₹130 Cr all-in. The state pays for outcomes, not enrolment — placement is billed only on a verified job. Optional employer &amp; CSR co-funding can offset further.</p>
+          </div>
           <div class="grid" style="grid-template-columns:1fr;gap:11px">
-            <div class="stat"><div class="num">₹12,000</div><div class="lab">per <strong>verified placement</strong> — the state pays only when a job is confirmed</div></div>
-            <div class="stat navy"><div class="num">1L → 2L</div><div class="lab">scales linearly to the state's stated ~2 lakh need; unit costs improve with volume <span class="chip c-proj">Scales</span></div></div>
-            <div class="stat green"><div class="num">CSR</div><div class="lab">optional employer &amp; CSR co-funding reduces state outlay further</div></div>
+            <div class="stat"><div class="num">2 L</div><div class="lab">workers skilled &amp; certified — ready for the corridor projects, jobs across India &amp; overseas</div></div>
+            <div class="stat green"><div class="num">40 K</div><div class="lab">verified placements — 20% target, paid on the outcome <span class="chip c-proj">Target</span></div></div>
+            <div class="stat navy"><div class="num">₹5,000</div><div class="lab">all-in skilling fee — training, assessment, certificate, digital identity &amp; registry</div></div>
           </div>
         </div>
-        <p class="lede" style="font-size:11px;color:var(--ink-mute);margin-top:12px">Indicative, adapted from BetterPlace's prior PMKVY 4.0 costing — e.g. ~₹50 Cr delivers 1 lakh certified + 10,000+ verified placements. Final commercials and milestone weights to be agreed with the state.</p>
       </div>
     </div>
     <div class="footer"><span>BetterPlace · Frontline Workforce Platform · Present in 500+ cities</span><span class="pg"></span></div>
